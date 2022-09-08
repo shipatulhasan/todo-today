@@ -233,7 +233,7 @@ const errorHandling = () =>{
         resetBtn.classList.add('hidden')
 
     }
-    else if(incomplete.length === 0 && complete.length !== 0 ){
+    else if(incomplete.length === 0 ){
         taskFinish.classList.remove('hidden')
         allclear.classList.add('hidden')
     }
