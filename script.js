@@ -178,9 +178,9 @@ const completeProcess = () =>{
         <h2 id="title">
             ${task.title}
         </h2>
-        <button onclick="deleteTask('${i}')" class="flex-shrink-0 bg-transparent hover:cursor-pointer text-sm font-bold text-cyan-400 pl-3 rounded tracking-wider">
+        <button onclick="deleteTask('${i}')" class="flex-shrink-0 bg-transparent hover:cursor-pointer text-sm font-bold text-red-500 pl-3 rounded tracking-wider">
         
-        <i class="fa-solid fa-trash-can text-cyan-400"></i>
+        <i class="fa-solid fa-trash-can text-red-500"></i>
             Remove
         </button>
         
@@ -227,21 +227,22 @@ const errorHandling = () =>{
     if(incomplete.length === 0 && complete.length === 0 ){
 
         allclear.classList.remove('hidden')
-        taskFinish?.classList.add('hidden')
+        taskFinish.classList.add('hidden')
         icompleteTitle?.classList.add('hidden')
         completeTitle?.classList.add('hidden')
         resetBtn.classList.add('hidden')
 
     }
-    else if(incomplete.length === 0){
-        taskFinish?.classList.remove('hidden')
+    else if(incomplete.length === 0 && complete.length !== 0 ){
+        taskFinish.classList.remove('hidden')
         allclear.classList.add('hidden')
     }
     else{
 
         allclear.classList.add('hidden')
-        icompleteTitle?.classList.remove('hidden')
-        completeTitle?.classList.remove('hidden')
+        taskFinish.classList.add('hidden')
+        icompleteTitle.classList.remove('hidden')
+        completeTitle.classList.remove('hidden')
         resetBtn.classList.remove('hidden')
     }
 }
