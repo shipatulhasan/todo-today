@@ -178,9 +178,9 @@ const completeProcess = () =>{
         <h2 id="title">
             ${task.title}
         </h2>
-        <button onclick="deleteTask('${i}')" class="flex-shrink-0 bg-transparent hover:cursor-pointer text-sm font-bold text-red-500 pl-3 rounded tracking-wider">
+        <button onclick="deleteTask('${i}')" class="flex-shrink-0 bg-transparent hover:cursor-pointer text-sm font-bold text-cyan-400 pl-3 rounded tracking-wider">
         
-        <i class="fa-solid fa-trash-can text-red-500"></i>
+        <i class="fa-solid fa-trash-can text-cyan-400"></i>
             Remove
         </button>
         
