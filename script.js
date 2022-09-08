@@ -35,6 +35,10 @@ const getValue = (id)=>{
 
 const addTask = ()=>{
     const task = getValue('todo-filed')
+    if(task === ''){
+        alert('please provide your task')
+        return
+    }
 
     const todos = saveTask()
     
