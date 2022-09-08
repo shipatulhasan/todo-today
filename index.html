@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo - List you to do task with this app</title>
+
+    <!-- fontAwsome -->
+    <script src="https://kit.fontawesome.com/59949b2abf.js" crossorigin="anonymous"></script>
+
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              },
+              fontFamily: {
+                'roboto':['Roboto', 'sans-serif'],
+              }
+            }
+          }
+        }
+      </script>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+  </style>
+
+
+</head>
+<body class="bg-slate-700 bg-[url('./bg.jpg')] bg-cover bg-no-repeat bg-center backdrop-blur-3xl">
+
+    <main class=" container flex flex-col justify-center items-center mx-auto min-h-[90vh] md:min-h-screen ">
+      <div id="date" class="py-5 text-center font-roboto"> 
+
+      </div>
+        <section class="shadow-xl bg-cyan-800 bg-opacity-10 rounded w-11/12 md:w-9/12 p-10 ">
+            <div class="text-center border-b-2 border-red-500 flex items-center px-2 w-full">
+                <input type="text" placeholder="Add your today's task" id="todo-filed" class="bg-transparent border-0 placeholder-slate-300 w-full py-2 text-white focus:outline-none ">
+
+                <button onclick="addTask()" class="flex-shrink-0 bg-transparent hover:text-slate-300 hover:cursor-pointer text-sm font-bold text-white  rounded tracking-wider">
+                  <i class="fa-solid fa-circle-plus"></i>
+                    add task
+                </button>
+            </div>
+        </section>
+
+        <section class="shadow-xl bg-cyan-800 bg-opacity-10 rounded text-white p-10 pb-5 w-11/12 md:w-9/12 my-4">
+          
+            <h2 id="errMSG" class="text-slate-300 font-bold hidden text-center">
+              No tasks available!!!
+            </h2>
+            <div class="grid md:grid-cols-2 gap-5 divide-y-2 md:divide-x-2 md:divide-y-0 divide-red-500">
+              <div id="incomplete-div">
+                <h2 id="incomplete-title" class="text-slate-300 text-xl font-bold pb-5">
+                  Incomplete Task
+                </h2>
+                <h2 id="complete" class="text-slate-300 font-bold hidden">
+                  No tasks Left For completing!!!
+                </h2>
+
+                <ul id="todo-list" class="list-decimal">
+    
+                  
+                </ul>
+              </div>
+
+              <div id="complete-task"class="pt-3 md:pt-0 md:px-3">
+
+                <h2 id="complete-title" class="text-slate-300 text-xl font-bold  pb-5">
+                  Complete Task
+                </h2>
+
+                <ul id="done-list" class="list-decimal">
+    
+                 
+               
+                </ul>
+              </div>
+
+            </div>
+            <div id="reset-btn" class="pt-10 text-center">
+
+              <button onclick="resetBtnClick()" class="bg-red-700 hover:cursor-pointer  focus:outline-none font-bold  text-white py-1 px-4 rounded-full tracking-wider shadow-md">reset
+              </button>
+            </div>
+         
+          
+        </section>
+
+        <footer>
+          <p class="text-sm font-semibold text-slate-200 text-center py-5 xl:py-10">
+            Presented by Md. Shipatul Hasan Shakib
+          </p>
+        </footer>
+
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
