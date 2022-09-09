@@ -40,7 +40,7 @@ const addTask = ()=>{
         return
     }
 
-    const todos = saveTask()
+    const todos = getTask()
     
     let todolist
 
@@ -59,13 +59,13 @@ const addTask = ()=>{
     errorHandling()
 }
 
-const saveTask = ()=>{
+const getTask = ()=>{
 
-    const saveTask = localStorage.getItem('todos')
+    const getTask = localStorage.getItem('todos')
     let tasks = []
-    if(saveTask){
+    if(getTask){
 
-        tasks = JSON.parse(saveTask)
+        tasks = JSON.parse(getTask)
     }
     
     return tasks
@@ -78,7 +78,7 @@ const saveTask = ()=>{
 const incompleteProcess = () =>{
 
 
-    const tasks = saveTask()
+    const tasks = getTask()
 
 
     const ul = document.getElementById('todo-list')
@@ -147,7 +147,7 @@ const findComplete = ()=>{
 
 const completeTask =(task,id)=>{
 
-    const tasks = saveTask()
+    const tasks = getTask()
     tasks.splice(id,1)
     localStorage.setItem('todos',JSON.stringify(tasks))
 
@@ -216,7 +216,7 @@ const resetBtnClick = () =>{
 // error handling
 
 const errorHandling = () =>{
-    const incomplete = saveTask()
+    const incomplete = getTask()
     const complete = findComplete()
     const allclear = getElement('errMSG')
     const taskFinish = getElement('complete')
