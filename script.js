@@ -58,6 +58,11 @@ const addTask = ()=>{
     incompleteProcess()
     errorHandling()
 }
+document.getElementById('todo-filed').addEventListener("keypress", function onEvent(event) {
+    if (event.key === "Enter") {
+        addTask();
+    }
+})
 
 const getTask = ()=>{
 
@@ -133,7 +138,6 @@ const addCompleteTask = (task) =>{
 const findComplete = ()=>{
     const completeTask = localStorage.getItem('completeTask')
     let task = []
-
     if(completeTask){
 
         task = JSON.parse(completeTask)

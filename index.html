@@ -33,13 +33,15 @@
 
 
 </head>
-<body class="bg-slate-700 bg-[url('./bg.jpg')] bg-cover bg-no-repeat bg-center backdrop-blur-3xl">
+<body class="relative bg-slate-700 bg-[url('./bg.jpg')] bg-cover bg-no-repeat bg-center backdrop-blur-3xl">
+  <!-- <div class="" /> -->
 
-    <main class=" container flex flex-col justify-center items-center mx-auto min-h-screen ">
-      <div id="date" class="py-5 text-center font-roboto"> 
+  <main class="container flex flex-col justify-center items-center mx-auto min-h-screen z-10">
+  
+      <div id="date" class="py-5 text-center font-roboto z-30"> 
 
       </div>
-        <section class="shadow-xl bg-cyan-800 bg-opacity-10 rounded w-11/12 md:w-9/12 p-10 ">
+        <section class="shadow-xl bg-cyan-800 bg-opacity-10 rounded w-11/12 md:w-9/12 p-10 z-50">
             <div class="text-center border-b-2 border-red-500 flex items-center px-2 w-full">
                 <input type="text" placeholder="Add your today's task" id="todo-filed" class="bg-transparent border-0 placeholder-slate-300 w-full py-2 text-white focus:outline-none ">
 
@@ -50,7 +52,7 @@
             </div>
         </section>
 
-        <section class="shadow-xl bg-cyan-800 bg-opacity-10 rounded text-white p-10 pb-5 w-11/12 md:w-9/12 my-4">
+        <section class="shadow-xl bg-cyan-800 bg-opacity-10 rounded text-white p-10 pb-5 w-11/12 md:w-9/12 my-4 z-10">
           
             <h2 id="errMSG" class="text-slate-300 font-bold hidden text-center">
               No tasks available!!!
